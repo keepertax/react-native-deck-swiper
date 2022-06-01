@@ -4,8 +4,6 @@ import PropTypes from "prop-types";
 import isEqual from "lodash/isEqual";
 import ViewOverflow from "react-native-view-overflow";
 
-import styles from "./styles";
-
 const { height, width } = Dimensions.get("window");
 const LABEL_TYPES = {
   NONE: "none",
