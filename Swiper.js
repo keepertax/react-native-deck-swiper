@@ -600,7 +600,7 @@ class Swiper extends Component {
     let overlayLabelStyle = dynamicStyle ? dynamicStyle.label : {};
 
     if (this.state.labelType === LABEL_TYPES.NONE) {
-      overlayLabelStyle = styles.hideOverlayLabel;
+      overlayLabelStyle = { opacity: 0 };
     }
 
     return overlayLabelStyle;
@@ -638,7 +638,6 @@ class Swiper extends Component {
   };
 
   calculateStackCardZoomStyle = (position) => [
-    styles.card,
     this.getCardStyle(),
     {
       zIndex: position * -1,
@@ -651,7 +650,6 @@ class Swiper extends Component {
   ];
 
   calculateSwipeBackCardStyle = () => [
-    styles.card,
     this.getCardStyle(),
     {
       zIndex: 4,
